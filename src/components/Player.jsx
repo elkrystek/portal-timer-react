@@ -9,6 +9,7 @@ export default function Player() {
 
    function handleClick(){
     setEneteredPlayer(playerName.current.value);
+    playerName.current.value = '';
       }
 
   return (
