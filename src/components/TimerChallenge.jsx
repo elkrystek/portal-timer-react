@@ -14,10 +14,12 @@ export default function Timerchallenge ({title,targetTime}){
             setTimerExpired(true);
         }, targetTime*1000);
 
-        setTimerStarted(True);
+        setTimerStarted(true);
     }
     function handleStop(){
         clearTimeout(timer);
+        setTimerStarted(false);
+    setTimerExpired(false);
     }
 
     return (
@@ -34,7 +36,7 @@ export default function Timerchallenge ({title,targetTime}){
     </button>
 </p>
 <p className={timerStarted ? 'active' : undefined}>
-    {timerStarted ? 'Time is running...' : 'TimerStopped'}
+    {timerStarted ? 'Time is running...' : 'Timer inactive'}
 </p>
     </section>
 );}
